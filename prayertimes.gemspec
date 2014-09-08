@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Prayertimes::VERSION
   spec.authors       = ["Mohamed El Mahallawy"]
   spec.email         = ["mmahalwy@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{ Gem used for calculating prayer times.}
+  spec.description   = %q{Gem used for calculating prayer times.}
   spec.homepage      = ""
   spec.license       = "MIT"
 
@@ -20,4 +20,5 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.7"
   spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "rspec"
 end
