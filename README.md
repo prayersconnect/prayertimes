@@ -19,8 +19,17 @@ Or install it yourself as:
     $ gem install prayertimes
 
 ## Usage
+```
+pt = Prayertimes::Calculate.new(method_name)
+# or
+pt = Prayertimes::Calculate.new
 
-TODO: Write usage instructions here
+# to get prayer times
+pt.getTimes(Time.now.asctime, [43, -80], -5) #note that must use .asctime to convert the time into a string
+
+# to change method
+pt.setMethod(method)
+```
 
 ## Contributing
 
