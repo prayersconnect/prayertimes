@@ -121,8 +121,8 @@ module Prayertimes
 
 		def setMethod(method)
 			if @@methods[method]
-				self.adjust(@@methods[method].params)
-				self.calcMethod = method
+				self.adjust(@@methods[method]["params"])
+				@@calcMethod = method
 			end
 		end
 
@@ -440,7 +440,9 @@ module Prayertimes
 			return  a < 0 ? a + mode : a
 		end
 
+		# Testing purposes
 		# pt = Calculate.new
+		# pt.setMethod("ISNA")
 		# pt.getTimes(Time.now.asctime, [43, -79], -5)
 	end
 end
