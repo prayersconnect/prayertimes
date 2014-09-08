@@ -1,7 +1,7 @@
 require "prayertimes/version"
 require "date"
 module Prayertimes
-	class Prayertimes
+	class Calculate
 
 
 		# Names of the times
