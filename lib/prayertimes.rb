@@ -184,8 +184,12 @@ module Prayertimes
 
 			minutes = ((time - hours)* 60).floor
 			suffix = format == '12h' ? suffixes[ hours < 12 ? 0 : 1 ]  : ''
-			# formattedTime = "%02d:%02d" % (hours, minutes) if format == "24h" else "%d:%02d" % ((hours+11)%12+1, minutes)
-			formattedTime = "#{hours}:#{minutes}"
+			if format == "24h"
+				formattedTime = "#{hours}:#{minutes}"
+			else
+				formattedTime = "#{(hours+11)%12+1}:#{minutes}"
+			end
+			
 			return formattedTime + suffix
 
 		end
@@ -436,7 +440,7 @@ module Prayertimes
 			return  a < 0 ? a + mode : a
 		end
 
-
-
+		# pt = Calculate.new
+		# pt.getTimes(Time.now.asctime, [43, -79], -5)
 	end
 end
