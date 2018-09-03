@@ -314,11 +314,11 @@ module Prayertimes
 			end
 			# need to ask about '@@settings
 			if self.isMin(params['maghrib'])
-				times['maghrib'] = times['sunset'] - self.eval(params['maghrib']) / 60.0
+				times['maghrib'] = times['sunset'] + self.eval(params['maghrib']) / 60.0
 			end
 
 			if self.isMin(params['isha'])
-				times['isha'] = times['maghrib'] - self.eval(params['isha']) / 60.0
+				times['isha'] = times['maghrib'] + self.eval(params['isha']) / 60.0
 			end
 			times['dhuhr'] += self.eval(params['dhuhr']) / 60.0
 
